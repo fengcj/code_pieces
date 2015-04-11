@@ -63,6 +63,21 @@ public class NetworkingAndroidHttpClientXMLActivity extends ListActivity {
 	}
 
 
+    /* 
+       the xml format is:
+          <geonames>
+             <earthquake>
+                <src>us</src>
+                <eqid>c0001xgp</eqid>
+                <datetime>2011-03-11 04:46:23</datetime>
+                <lat>38.322</lat>
+                <lng>142.369</lng>
+                <magnitude>8.8</magnitude>
+                <depth>24.4</depth>
+             </earthquake>
+             ...
+          </geonames>
+   */
     private class XMLResponseHandler implements ResponseHandler<List<String>> {
 
         private static final String MAGNITUDE_TAG = "magnitude";
