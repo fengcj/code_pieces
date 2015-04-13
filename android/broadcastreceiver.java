@@ -7,6 +7,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.os.Vibrator;
+import android.util.Log;
+import android.widget.Toast;
+
 
 /*
   In AndroidManifest.xml file:
@@ -46,3 +52,30 @@ public class SimpleBroadcast extends Activity {
 		});
 	}
 }
+
+
+
+class Receiver extends BroadcastReceiver {
+
+	private final String TAG = "Receiver";
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+
+		Log.i(TAG, "INTENT RECEIVED");
+
+		Vibrator v = (Vibrator) context
+				.getSystemService(Context.VIBRATOR_SERVICE);
+		v.vibrate(500);
+
+		Toast.makeText(context, "INTENT RECEIVED by Receiver", Toast.LENGTH_LONG).show();
+
+	}
+
+}
+
+
+
+
+
+
