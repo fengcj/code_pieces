@@ -17,4 +17,27 @@
 	 name = "igt";
 
 
-}())
+}());
+
+
+
+(function(){
+
+
+
+	var myHealth = 100;
+
+	var decrementHealth = function(){
+
+		console.log(myHealth);  // undefined
+		var myHealth = myHealth - 1;
+		console.log(myHealth);  // NaN
+	}
+
+
+	decrementHealth();
+
+
+}());
+
+var master_branch = "master";
