@@ -40,6 +40,6 @@
 
 }());
 
-var js_branch = "jsbranch"; // can be merge?
+// can be merge? maybe confict?
 // can be merge? can be merge again
 
