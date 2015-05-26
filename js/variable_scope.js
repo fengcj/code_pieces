@@ -40,4 +40,4 @@
 
 }());
 
-var master_branch = "master";
+var js_branch = "jsbranch";
