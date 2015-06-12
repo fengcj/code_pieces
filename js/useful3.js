@@ -372,3 +372,23 @@
 
 }());
 
+
+(function(){
+	// `exports` is the global variable in server js.
+	console.log(this == exports);  //  true
+	console.log(JSON.stringify(exports)); //  {}
+	console.log(this);  //  {}
+	console.log(typeof module);  //  object
+	console.log(JSON.stringify(module));
+	console.log("exports" in module);  //  true
+
+
+
+	console.log(global);
+	console.log(process);
+	console.log(console);
+
+
+}.call(this));
+
+
